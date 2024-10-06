@@ -89,14 +89,6 @@ final _router = GoRouter(
 );
 
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  runApp(ChangeNotifierProvider(
-    create: (context) => ApplicationState(),
-    builder: ((context, child) => const App()),
-  ));
-}
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -120,3 +112,14 @@ class App extends StatelessWidget {
     );
   }
 }
+
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(ChangeNotifierProvider(
+    create: (context) => ApplicationState(),
+    builder: ((context, child) => const App()),
+  ));
+}
+
