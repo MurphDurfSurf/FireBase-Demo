@@ -61,7 +61,9 @@ class HomePage extends StatelessWidget {
                   // Add from here...
                   YesNoSelection(
                     state: appState.attending,
-                    onSelection: (attending) => appState.attending = attending,
+                    onSelection: (attending, extraAttendees) {
+                      appState.setAttendingWithNum(attending, extraAttendees ?? 0);
+                    },
                   ),
                   // ...to here.
                   const Header('Discussion'),
